@@ -1,0 +1,61 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="generator" content="Polymer Starter Kit">
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+    <title>EOS TicTacToe</title>
+    <meta name="description" content="EOS TicTacToe Deomonstation Game">
+    <base href="/">
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="manifest" href="manifest.json">
+    <meta name="theme-color" content="#3f51b5">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="EOS TicTacToe">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="EOS TicTacToe">
+    <link rel="apple-touch-icon" href="images/manifest/icon-48x48.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/manifest/icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="96x96" href="images/manifest/icon-96x96.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="images/manifest/icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="192x192" href="images/manifest/icon-192x192.png">
+    <meta name="msapplication-TileImage" content="images/manifest/icon-144x144.png">
+    <meta name="msapplication-TileColor" content="#3f51b5">
+    <meta name="msapplication-tap-highlight" content="no">
+    <script>
+      window.EosTicTacToeGlobals = { rootPath: '/' };
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function() {
+          navigator.serviceWorker.register('service-worker.js', {
+            scope: EosTicTacToeGlobals.rootPath
+          });
+        });
+      }
+    </script>
+    <script src="node_modules/@webcomponents/webcomponentsjs/webcomponents-loader.js"></script>
+    <script type="module" src="src/eos-tictactoe.js"></script>
+    <style>
+      html {
+        height: 100%;
+      }
+      body {
+        font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+        display: block;
+        height: 100%;
+        background-image: linear-gradient(0deg, #494F6F 100%, #222634 100%);
+        border: 0;
+        padding: 0;
+        margin: 0;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body>
+    <eos-tictactoe></eos-tictactoe>
+    <noscript>
+      Please enable JavaScript to view this website.
+    </noscript>
+  </body>
+</html>
